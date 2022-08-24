@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue Events</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
+  </head>
+
+  <body>
+    <div id="vue-app">
+      <h1>Dynamic CSS</h1>
+      <h2>Example 1: Binding To Data Component</h2>
+      <div
+        v-on:click="available = !available"
+        v-bind:class="{available: available}"
+      >
+        <span>Express Taxis</span>
+      </div>
+
+      <h2>Example 2: Binding To Computed Component</h2>
+      <div
+        v-on:click="nearby = !nearby, grow = !grow"
+        v-bind:class="compClasses"
+      >
+        <span>Fastest Taxicabs</span>
+      </div>
+    </div>
+    <!-- end vue app -->
+
+    <script src="app.js"></script>
+  </body>
+</html>
