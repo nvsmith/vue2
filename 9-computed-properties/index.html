@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vue Events</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
+</head>
+
+<body>
+  <div id="vue-app">
+    <h1>Computed Properties</h1>
+    <h2>Hi there, partner</h2>
+    <p>Watch the console to see how much more efficient it is to use computed properties rather than methods</p>
+
+    <h3>With Methods: 
+      <br>Every method runs with every single event action.
+    </h3>
+    <button v-on:click="a++">Add to A</button>
+    <button v-on:click="b++">Add to B</button>
+    <p>A - {{a}}</p>
+    <p>B - {{b}}</p>
+    <p>Age + A = {{addToA()}}</p>
+    <p>Age + B = {{addToB()}}</p>
+
+    <h3>With Computed Properties: 
+      <br>Only the specific event is run (after the DOM initializes).
+    </h3>
+    <button v-on:click="c++">Add to C</button>
+    <button v-on:click="d++">Add to D</button>
+    <p>C - {{c}}</p>
+    <p>D - {{d}}</p>
+    <p>Age + C = {{addToC}}</p>
+    <p>Age + D = {{addToD}}</p>
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
