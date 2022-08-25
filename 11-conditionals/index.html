@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue Events</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
+  </head>
+
+  <body>
+    <div id="vue-app">
+      <h1>Conditionals</h1>
+
+      <h3>Removing Elements from the DOM with if/else-if</h3>
+      <button v-on:click="error =!error">Toggle Error</button>
+      <button v-on:click="success =!success">Toggle Success</button>
+      <p v-if="error">Error detected.</p>
+      <p v-else-if="success">Successful!</p>
+
+      <h3>Modifying Element Display Property</h3>
+      <button v-on:click="error2 =!error2">Toggle Error2</button>
+      <button v-on:click="success2 =!success2">Toggle Success2</button>
+      <p v-show="error2">Error detected again.</p>
+      <p v-show="success2">More success.</p>
+    </div>
+    <!-- end vue app -->
+
+    <script src="app.js"></script>
+  </body>
+</html>
