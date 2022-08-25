@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue Events</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
+  </head>
+
+  <body>
+    <div id="vue-app">
+      <h1>V-for Loops</h1>
+      <ul>
+        <li v-for="character in characters">{{character}}</li>
+      </ul>
+
+      <hr />
+
+      <h2>Using Templates</h2>
+
+      <template v-for="(athlete, index) in athletes">
+        <h3>{{index}}</h3>
+        <h4>{{athlete.name}} - {{athlete.age}}</h4>
+      </template>
+
+      <hr />
+
+      <h2>Key Value Pairs</h2>
+      <template v-for="athlete in athletes">
+        <div v-for="(val,key) in athlete">
+          <p>{{key}} - {{val}}</p>
+        </div>
+      </template>
+    </div>
+    <!-- end vue app -->
+
+    <script src="app.js"></script>
+  </body>
+</html>
